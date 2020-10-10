@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link, NavLink} from 'react-router-dom';
 class Menu extends Component{
     render(){
         return(
@@ -9,11 +9,17 @@ class Menu extends Component{
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><b>SII MAROC</b></a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Collaborateurs</a></li>
-      <li><a href="#">Compétences</a></li>
-      <li><a href="#">Matrice Compétences</a></li>
+    <ul className="nav navbar-nav">
+      <li className="nav-item">
+        <NavLink className="nav-link" exact to="/">Home</NavLink>
+        </li>
+      <li className="nav-item">
+      <NavLink className="nav-link" exact to="/add">Collaborateurs</NavLink></li>
+      <li className="nav-item">
+        <NavLink className="nav-link" exact to="/competence">Compétences</NavLink>
+      </li>
+      <li  className="nav-item">
+        <NavLink className="nav-link" exact to="/matrice">Matrice Compétences</NavLink></li>
       <li><a href="#">Seuil équipe</a></li>
     </ul>
   </div>

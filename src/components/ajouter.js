@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import Menu from './menu.js'
 const st={
     margin: '10px 20px ',
     padding: 23, 
@@ -19,7 +20,8 @@ padding:'60px 500px',
 }
 class Formulaire extends Component {
 render() {
-    return (
+    return (<div>
+    <Menu/>
         <div style={tab} class="form-group col-md-2">
             
         <input name="a" style={st} type="text" class="form-control" onChange={(e)=>{this.props.hundelChange(e.target)}}/>
@@ -27,7 +29,7 @@ render() {
         <input  name="c" style={st} type="text" class="form-control" onChange={(e)=>{this.props.hundelChange(e.target)}}/>
         <input  name="d" style={st} type="text" class="form-control" onChange={(e)=>{this.props.hundelChange(e.target)}}/>
         <button style={style} class="btn btn-success" onClick={()=>{this.props.add(this.props.input)}}>Add</button>
-      </div>
+      </div></div>
       
     );
   }
@@ -39,11 +41,9 @@ const mapDispatchToProps=(dispatch)=>{
       },
       add:(input)=>{
         let obj={}
-        let ob={}
         let inputValue=input
         obj={inputValue}
-        ob={inputValue}
-        dispatch ({type:'ADD_INPUT',value:obj,value:ob})
+        dispatch ({type:'ADD_INPUT',value:obj})
       }
     }
     }

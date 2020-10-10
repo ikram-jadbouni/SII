@@ -1,23 +1,29 @@
 import React from 'react';
 import { Component } from 'react';
 import Add from './components/add.js'
-import Main from './components/main.js'
 import Menu from './components/menu.js'
 import Formulaire from './components/ajouter.js'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router , Switch } from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+import Matrice from './components/matrice.js';
+import Competence from './components/competence.js'
 
 class App extends Component {
-    state ={ }
+    
     render(){
         return (
-        <BrowserRouter>
-        <div className>
-          <Menu/>
-          <Add/>
+        <Router>
+        <div className="App">
+          <Switch>
 
-          <Route path="/" component={Formulaire} /> 
+          <Route exact path="/" component={Menu} />
+          <Route exact path="/add" component={Add} />
+          <Route exact path="/ajouter" component={Formulaire} />
+          <Route exact path="/matrice" component={Matrice} />
+          <Route exact path="/competence" component={Competence} />
+           </Switch>
            </div>
-           </BrowserRouter>
+           </Router>
        
       
    )

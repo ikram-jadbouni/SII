@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
-import {BrowserRouter, Route } from "react-router-dom"
-
+import {BrowserRouter, Route } from "react-router-dom";
+import Menu from './menu.js'
 const style = {
     padding: '9px 20px',
   width: 140,
@@ -14,20 +13,20 @@ const style = {
       margin: '100px  ',
       padding: 20,        
   }
-  const tab={
-
-  }
+  
 class Add extends Component {
   render() { 
     return (  
+      
         <div align>
+<Menu/>
         <table >
             <tr>
       <td ><input style={st} type="text" onChange={(e)=>{this.props.hundelChange(e.target)}} class="form-control" placeholder="Search by name"/> </td>
       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-    <td> <button style={style} class="btn btn-success">Add</button></td>
+    <td><a href="/ajouter"><button style={style} class="btn btn-success">Add</button></a> </td>
       </tr>
       </table>
       
