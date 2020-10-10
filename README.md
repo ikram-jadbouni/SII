@@ -1,4 +1,4 @@
-# Voici le code de ma todolist en utulisant react/redux
+# Voici le code de ma todolist en utulisant react/redux.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
